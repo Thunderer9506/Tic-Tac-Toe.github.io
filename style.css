@@ -5,19 +5,102 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Outfit',sans-serif;
-    width: 100%;
-    height: auto;
+    background-color: #1a2a33;
+    font-weight: 700;
+    transition-duration: 0.5s; 
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57rem;
 }
 
-/* .main{
-    
-} */
 .starting_menu{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 30rem;
 }
 .starting_menu img{
     height: 2rem;
+}
+
+.player_pick{
+    background-color: #1f3641;
+    border-radius: 1rem;
+    padding: 24px 0px;
+    text-align: center;
+    width: 100%;
+    margin: 40px 0px 40px 0px;
+    box-shadow: 0px 8px #111c22;
+    .pick_heading{
+        color: #a8bfc9;
+    }
+    .remember{
+        color: #546c76;
+        font-size: 14px;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+.pick_background{
+    background-color: #1a2a33;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 24px 1rem 24px 1rem;
+    color: #a8bfc9;
+    i{
+        padding: 0.5rem 5rem 0.5rem 5rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        font-size: 3.5rem;
+        transition-duration: 0.5s; 
+    }
+}
+
+.active{  
+    color: #1a2a33;
+    background-color: #a8bfc9;  
+}
+
+.starting_button{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .vs_cpu{
+        background-color: #f2b137;
+        box-shadow: 0px 8px #b77c0c;
+        margin-bottom: 2rem;
+    }
+    .vs_cpu:hover{
+        background-color: #ffc860;
+    }
+    .vs_player{
+        background-color: #31c3bd;
+        box-shadow: 0px 8px #1d716e;
+    }
+    .vs_player:hover{
+        background-color: #65e9e4;
+    }
+}
+
+.starting_button button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    padding: 20px 90px;
+    border-radius: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
