@@ -14,15 +14,70 @@
             <div class="player_pick">
                 <p class="pick_heading">PICK PLAYER 1'S MARK</p>
                 <div class="pick_background">
-                    <i type="button" class="active pick_cross fa-solid fa-xmark"></i>
+                    <i type="button" class="pick_cross fa-solid fa-xmark"></i>
                     <i type="button" class="pick_circle fa-regular fa-circle"></i>
                 </div>
                 <p class="remember">REMEMBER: X GOES FIRST</p>
             </div>
             <div class="starting_button">
-                <button class="vs_cpu" type="button">NEW GAME (VS CPU)</button>
-                <button class="vs_player" type="button">NEW GAME (VS PLAYER)</button>
+                <button onclick="start()" class="vs_cpu" type="button">NEW GAME (VS CPU)</button>
+                <button onclick="start()" class="vs_player" type="button">NEW GAME (VS PLAYER)</button>
             </div>
+        </div>
+
+        <div class="playing">
+            <div class="header">
+                <img src="SVG/logo.svg">
+                <div class="turn">
+                    <i type="button" class="fa-solid fa-xmark fa-lg"></i>
+                    <p>TURN</p>
+                </div>
+                <button onclick="restart()" class="restart" type="button">
+                    <i class="fa-solid fa-rotate-right fa-xl"></i>
+                </button>
+                
+                <button class="playing_button one" type="button">
+                    <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button two" type="button">
+                    <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button three" type="button">
+                    <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button four" type="button">
+                     <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button five" type="button">
+                     <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button six" type="button">
+                     <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button seven" type="button">
+                     <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button eight" type="button">
+                     <img src="SVG/icon-o.svg">
+                </button>
+                <button class="playing_button nine" type="button">
+                     <img src="SVG/icon-o.svg">
+                </button>
+                
+                <div class="x_box">
+                    <P class="scoreTitle">X(CPU)</P>
+                    <P class="score">0</P>
+                </div>
+                <div class="ties">
+                    <P class="scoreTitle">TIES</P>
+                    <P class="score">0</P>
+                </div>
+                <div class="o_box">
+                    <P class="scoreTitle">O(YOU)</P>
+                    <P class="score">0</P>
+                </div>
+            </div>
+            
         </div>
     </div>
     <script src="main.js"></script>
