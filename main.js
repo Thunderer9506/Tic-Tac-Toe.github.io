@@ -3,6 +3,7 @@ const playButtons = document.querySelectorAll(".playing_button")
 let x = pick[0]
 let o = pick[1]
 
+let turn = "x"
 let player = ""
 let opponent = ""
 
@@ -35,9 +36,19 @@ for(let i = 0;i<pick.length;i++){
 
 
 
-for (let i =0;i<playButtons.length;i++){
+for(let i = 0;i<playButtons.length;i++){
     playButtons[i].addEventListener("click",function(event){
-        
+        if(turn == "x"){
+            document.querySelector(".turn i").setAttribute("class","fa-regular fa-circle fa-lg")
+            document.querySelectorAll(".playing_button img")[i].src = "SVG/icon-x.svg"
+            turn = "o"
+        }
+        else if(turn == "o"){
+            document.querySelector(".turn i").setAttribute("class","fa-solid fa-xmark fa-lg")
+            document.querySelectorAll(".playing_button img")[i].src = "SVG/icon-o.svg"
+            turn = "x"
+        }
+        document.querySelectorAll(".playing_button img")[i].style.display = "block";
     })
 }
 
