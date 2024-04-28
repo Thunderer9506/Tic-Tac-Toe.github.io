@@ -7,17 +7,26 @@ body{
     font-family: 'Outfit',sans-serif;
     background-color: #1a2a33;
     font-weight: 700;
-    transition-duration: 0.5s; 
 }
+button{
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 57rem;
+    transition-duration: 0.5s; 
 }
 
 .starting_menu{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -92,15 +101,93 @@ body{
 }
 
 .starting_button button{
-    background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
     padding: 20px 90px;
     border-radius: 1rem;
     font-weight: 700;
     font-size: 1.2rem;
+}
+
+
+
+
+.playing{
+    display: block;
+}
+
+
+.header{
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: 8.75rem 8.75rem 8.75rem;;
+    grid-template-rows: 3.75rem 8.5rem 8.5rem 8.5rem 4.625rem;
+    gap: 1.3rem;
+    img{
+        height: 2rem;
+        justify-self: center;
+        align-self: center;
+    }
+}
+
+.turn{
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: #1f3641;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #a8bfc9;
+    box-shadow: 0px 4px #111c22;
+}
+
+.restart{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    width: 4.5rem;
+    height: 90%;
+    border-radius: 10px;
+    background-color: #a8bfc9;
+    box-shadow: 0px 4px #6991a2;
+    justify-self: flex-end;
+    align-self: center;
+    i{
+        color: #1f3641;
+    }
+}
+
+.playing_button{
+    height: 100%;
+    width: 100%;
+    background-color: #1f3641;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px #111c22;
+    img{
+        height: 5rem;
+    }
+}
+
+.x_box,.ties,.o_box{
+    text-align: center;
+    color: #1a2a33;
+    border-radius: 14px;
+    .scoreTitle{
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+    .score{
+        margin: 0;
+        font-size: 1.4rem;
+    }
+}
+.x_box{
+    background-color:#31c3bd;
+}
+.ties{
+    background-color:#a8bfc9;
+}
+.o_box{
+    background-color:#f2b137;
 }
