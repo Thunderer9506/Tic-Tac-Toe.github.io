@@ -26,7 +26,7 @@ button{
 }
 
 .starting_menu{
-    display: none;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -111,7 +111,7 @@ button{
 
 
 .playing{
-    display: block;
+    display: none;
 }
 
 
@@ -168,6 +168,9 @@ button{
         height: 5rem;
         display: none;
     }
+}
+.playing_button:hover img{
+    display: block;
 }
 
 .x_box,.ties,.o_box{
