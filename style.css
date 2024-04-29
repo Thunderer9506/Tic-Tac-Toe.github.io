@@ -107,13 +107,9 @@ button{
     font-size: 1.2rem;
 }
 
-
-
-
 .playing{
     display: none;
 }
-
 
 .header{
     grid-area: 1 / 1 / 2 / 2;
@@ -168,9 +164,6 @@ button{
         height: 5rem;
         display: none;
     }
-}
-.playing_button:hover img{
-    display: block;
 }
 
 .x_box,.ties,.o_box{

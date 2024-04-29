@@ -2,6 +2,7 @@ const pick = document.getElementsByTagName("i")
 let playButtons = document.querySelectorAll(".playing_button")
 let playerbuttons = document.querySelectorAll(".playing_button img")
 
+
 let xscore = 0
 let oscore = 0
 let tiescore = 0
@@ -38,9 +39,11 @@ function engine(){
     for(let i = 0;i<winSituation.length;i++){
         if(xList.includes(winSituation[i][0]) & xList.includes(winSituation[i][1]) & xList.includes(winSituation[i][2])){
             xscore += 1
+            
         }
         else if(oList.includes(winSituation[i][0]) & oList.includes(winSituation[i][1]) & oList.includes(winSituation[i][2])){
             oscore += 1
+            
         }
         else if(xList.length + oList.length == 9){
             tiescore += 1
@@ -56,6 +59,8 @@ for(let i = 0;i<pick.length;i++){
             if (!("active" in x)){
                 x.classList.add("active")
                 o.classList.remove("active")
+                document.querySelector(".x_box .scoreTitle").innerText = "X(YOU)"
+                document.querySelector(".o_box .scoreTitle").innerText = "O(CPU)"
                 player = "x"
                 opponent = "o"
             } 
@@ -64,19 +69,11 @@ for(let i = 0;i<pick.length;i++){
             if (!("active" in o)){
                 o.classList.add("active")
                 x.classList.remove("active")
+                document.querySelector(".x_box .scoreTitle").innerText = "O(YOU)"
+                document.querySelector(".o_box .scoreTitle").innerText = "X(CPU)"
                 player = "o"
                 opponent = "x"
             }
-        }
-    })
-}
-for(let i = 0;i<playerbuttons.length;i++){
-    playerbuttons[i].addEventListener("mouseover",function(event){
-        if(turn == "x"){
-            playerbuttons[i].src = "SVG/icon-x-outline.svg"
-        }
-        else if(turn == "o"){
-            playerbuttons[i].src = "SVG/icon-o-outline.svg"
         }
     })
 }
@@ -96,9 +93,7 @@ for(let i = 0;i<playButtons.length;i++){
             turn = "x"
             oList.push(this.classList[1])
         }
-        delete playButtons[this]
-        delete playerbuttons[playerbuttons[i]]
-        // playerbuttons[i].disabled = true
+        this.disabled = true
         playerbuttons[i].style.display = "block";
         document.querySelectorAll(".playing_button")[i].style.boxShadow = "0px 5px #111c22";
         engine()
