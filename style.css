@@ -31,6 +31,7 @@ button{
     justify-content: center;
     align-items: center;
     width: 30rem;
+    text-align: center;
 }
 .starting_menu img{
     height: 2rem;
@@ -83,14 +84,6 @@ button{
     display: flex;
     flex-direction: column;
     width: 100%;
-    .vs_cpu{
-        background-color: #f2b137;
-        box-shadow: 0px 8px #b77c0c;
-        margin-bottom: 2rem;
-    }
-    .vs_cpu:hover{
-        background-color: #ffc860;
-    }
     .vs_player{
         background-color: #31c3bd;
         box-shadow: 0px 8px #1d716e;
@@ -106,6 +99,71 @@ button{
     font-weight: 700;
     font-size: 1.2rem;
 }
+.win_lost_background{
+    display: none;
+    position: absolute;
+    height: 101.6%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.4;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.win_lose{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #1f3641;
+    text-align: center;
+    color: #a8bfc9;
+    animation: fadeIn 0.4s ease-in-out;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    p{
+        margin: 0;
+    }
+}
+.whowin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1rem;
+    img{
+        height: 4rem;
+    }
+    p{
+        color: #f2b137;
+        font-size: 3rem;
+        margin: 0;
+    }
+}
+.quit{
+    background-color: #a8bfc9;
+    box-shadow: 0px 5px #6991a2;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color:#1a2a33;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+.quit:hover{
+    background-color: #dbe8ed;
+}
+.nextRound{
+    background-color: #f2b137;
+    box-shadow: 0px 5px #b77c0c;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color:#1a2a33;
+    padding: 1rem;
+}
+.nextRound:hover{
+    background-color: #ffc860;
+}
+
+
 
 .playing{
     display: none;
