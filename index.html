@@ -14,18 +14,31 @@
             <div class="player_pick">
                 <p class="pick_heading">PICK PLAYER 1'S MARK</p>
                 <div class="pick_background">
-                    <i type="button" class="pick_cross fa-solid fa-xmark"></i>
+                    <i type="button" class="active pick_cross fa-solid fa-xmark"></i>
                     <i type="button" class="pick_circle fa-regular fa-circle"></i>
                 </div>
                 <p class="remember">REMEMBER: X GOES FIRST</p>
             </div>
             <div class="starting_button">
-                <button onclick="start()" class="vs_cpu" type="button">NEW GAME (VS CPU)</button>
-                <button onclick="start()" class="vs_player" type="button">NEW GAME (VS PLAYER)</button>
+                <button onclick="startplaying()" class="vs_player" type="button">START PLAYING</button>
             </div>
         </div>
-
+        <div class="win_lost_background">
+            
+        </div>
+        <div class="win_lose">
+            <p>PLAYER X WINS</p>
+            <div class="whowin">
+                <img src="SVG/icon-o.svg">
+                <p>TAKES THIS ROUND</p>
+            </div>
+            <div class="win_lose_button">
+                <button onclick="quit()" class="quit" type="button">QUIT</button>
+                <button onclick="nextRound()" class="nextRound" type="button">NEXT ROUND</button>
+            </div>
+        </div>
         <div class="playing">
+            
             <div class="header">
                 <img src="SVG/logo.svg">
                 <div class="turn">
